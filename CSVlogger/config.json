@@ -1,0 +1,14 @@
+{
+	"csvPath": "/mnt/c/Users/Hp/OneDrive/My-Todo/logs",
+	"csvChannels": [0,1,2,3,4,5],
+	"csvInterval": 10,
+    "recvIP": "127.0.0.1", 
+    "recvPort": 48011, 
+	"sendIP": "127.0.0.1", 
+    "sendPort": 48012, 
+	"recvIF": "",
+    "IS_ALL_GROUPS": "True",
+	"recMask": [0,4],
+	"allowDeletion": "True",
+	"daysToKeep": 7
+}

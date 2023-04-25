@@ -1,0 +1,108 @@
+$axis-color: #000
+$line-color: #4682b4
+$tooltip-background-color: #b0c4de
+$tooltip-span-color: #000
+$font: 'Lobster'
+$font-size-small: 14px
+
+.axis {
+  font-family:$font;
+  font-size: font-size-small
+}
+
+.axis2 {
+  font-family:$font;
+  font-size: font-size-small
+}
+
+.axis path,
+.axis line{
+  fill: none;
+  shape-rendering: crispEdges;
+  stroke: $axis-color;
+}
+.axis2 path,
+.axis2 line {
+  fill: none;
+  shape-rendering: crispEdges;
+  stroke: $axis-color;
+}
+.x axis path{
+  display: none
+}
+  
+
+.y axis text{
+  fill: $axis-color
+}
+  
+.x axis2 path{
+  display: none
+}
+  
+
+.y axis2 text{
+  fill: $axis-color
+}
+  
+.line{
+  fill: none;
+  stroke: $line-color;
+  stroke-width: 3px
+}
+.line2 {
+  fill: none;
+  stroke: $line-color;
+  stroke-width: 3px
+} 
+
+.tooltip {
+  background: $tooltip-background-color;
+  border: 0;
+  border-radius: 8px;
+  font-family: $font;
+  font-size: 12px;
+  font-weight: bold;
+  height: 40px;
+  padding: 2px;
+  pointer-events: none;
+  position: absolute;
+  text-align: center;
+  width: 120px;
+}
+
+.tooltip2 {
+  background: $tooltip-background-color;
+  border: 0;
+  border-radius: 8px;
+  font-family: $font;
+  font-size: 12px;
+  font-weight: bold;
+  height: 40px;
+  padding: 2px;
+  pointer-events: none;
+  position: absolute;
+  text-align: center;
+  width: 120px;
+}
+  
+span {
+  color: $tooltip-span-color;
+}
+  
+
+.line--section {
+    margin-top: 3rem;
+  }
+
+.line--section2 {
+  margin-top: 3rem;
+}
+.line--wrapper {
+  width: 100%;
+}
+@media only screen and (min-width: 960px) {
+  .line--wrapper {
+    width: calc(100% / 3);
+  }
+}
