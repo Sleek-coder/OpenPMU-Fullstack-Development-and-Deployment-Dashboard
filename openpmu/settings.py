@@ -200,7 +200,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
-STATIC_URL = 'static_files/'
+# STATIC_URL = 'static_files/'
+# The STATIC_URL  maybe helps specifies  the url or path Nginx should search 
+# so as to host all static files: lets confirm!
+
+STATIC_URL = 'static/'
 
 # STATIC_URL = 'build/static/'
 
@@ -208,7 +212,10 @@ STATIC_URL = 'static_files/'
         # 'DIRS': [BASE_DIR/ 'build'],
 # STATIC_ROOT = os.path.join(BASE_DIR,'build/static')
 
+# STATIC_ROOT helps specifies where Django collects all static files for Nginx
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
+
+
 # STATICFILES_DIRS = [
 #     BASE_DIR / "static",
 #     "/var/www/static/",
