@@ -11,9 +11,11 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 # Quick-start development settings - unsuitable for production
@@ -25,7 +27,7 @@ SECRET_KEY = 'django-insecure-&-!@!#5f1$27il7hijx46op0ld23rf2s-+d@8(-w)hl%cvkf-7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['13.53.169.115', '127.0.0.1','localhost']
 
 
 # Application definition
@@ -67,6 +69,10 @@ MIDDLEWARE = [
 # REST_FRAMEWORK={'DEFAULT_PERMISSION_CLASSES':['rest_framework.permission.AllowAny']}
 
 REST_FRAMEWORK = {
+    # 'DEFAULT_AUTHENTICATION_CLASSES': [
+    #     'knox.auth.TokenAuthentication',
+    # ],
+    'DEFAULT_SCHEMA_CLASS':'rest_framework.Schemas.coreapi.AutoSchema',
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',
     ],
@@ -88,14 +94,25 @@ CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000'
 ]
 
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_REGEX_WHITELIST=[
+    'http://localhost:3000'
+]
+
+CORS_ORIGIN_ALLOW_ALL = False
+
+# CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ALLOW_CREDENTIALS = True
 
 ROOT_URLCONF = 'openpmu.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR/ 'templates'],
+        # 'DIRS': [BASE_DIR/'templates'],
+        'DIRS': [BASE_DIR/ 'build/static'],
+
+        # 'DIRS': [os.path.join(BASE_DIR, 'build')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -181,8 +198,26 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
-
 STATIC_URL = 'static/'
+
+# STATIC_URL = 'build/static/'
+
+# STATIC_URL = '/static/'
+        # 'DIRS': [BASE_DIR/ 'build'],
+
+STATIC_ROOT = os.path.join(BASE_DIR,'build/static'),
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static",
+#     "/var/www/static/",
+# ]
+
+# STATICFILES_DIRS = [
+#    [BASE_DIR / "build/static"],
+# ]
+# STATICFILES_DIRS =[
+#     # os.path.join(BASE_DIR,"static_cdn"),
+#     os.path.join(BASE_DIR,'/build','/static'),
+# ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

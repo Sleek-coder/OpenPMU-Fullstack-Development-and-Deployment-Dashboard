@@ -1,97 +1,51 @@
-$axis-color: #000
-$line-color: #4682b4
-$tooltip-background-color: #b0c4de
-$tooltip-span-color: #000
-$font: 'Lobster'
-$font-size-small: 14px
-
 .axis {
-  font-family:$font;
-  font-size: font-size-small
-}
-
-.axis2 {
-  font-family:$font;
-  font-size: font-size-small
+  font-family: "Lobster";
+  font-size: 14px;
 }
 
 .axis path,
-.axis line{
+.axis line {
   fill: none;
   shape-rendering: crispEdges;
-  stroke: $axis-color;
+  stroke: #000;
 }
-.axis2 path,
-.axis2 line {
-  fill: none;
-  shape-rendering: crispEdges;
-  stroke: $axis-color;
-}
-.x axis path{
-  display: none
-}
-  
 
-.y axis text{
-  fill: $axis-color
+.x.axis path {
+  display: none;
 }
-  
-.x axis2 path{
-  display: none
-}
-  
 
-.y axis2 text{
-  fill: $axis-color
+.y.axis text {
+  fill: #000;
 }
-  
-.line{
+
+.line {
   fill: none;
-  stroke: $line-color;
-  stroke-width: 3px
+  stroke: #4682b4;
+  stroke-width: 3px;
 }
-.line2 {
-  fill: none;
-  stroke: $line-color;
-  stroke-width: 3px
-} 
 
 .tooltip {
-  background: $tooltip-background-color;
+  background: #b0c4de;
   border: 0;
   border-radius: 8px;
-  font-family: $font;
+  font-family: "Lobster";
   font-size: 12px;
   font-weight: bold;
-  height: 40px;
+  height: 80px;
   padding: 2px;
   pointer-events: none;
   position: absolute;
   text-align: center;
   width: 120px;
 }
-
-.tooltip2 {
-  background: $tooltip-background-color;
-  border: 0;
-  border-radius: 8px;
-  font-family: $font;
-  font-size: 12px;
-  font-weight: bold;
-  height: 40px;
-  padding: 2px;
-  pointer-events: none;
-  position: absolute;
-  text-align: center;
-  width: 120px;
+.tooltip span {
+  color: #000;
 }
-  
-span {
-  color: $tooltip-span-color;
-}
-  
 
-.line--section {
+
+
+
+/* .line--section {
     margin-top: 3rem;
   }
 
@@ -105,4 +59,51 @@ span {
   .line--wrapper {
     width: calc(100% / 3);
   }
+} */
+
+.axis {
+  font-family: "Lobster";
+  font-size: 14px;
 }
+
+.axis path,
+.axis line {
+  fill: none;
+  shape-rendering: crispEdges;
+  stroke: #000;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.y.axis text {
+  fill: #000;
+}
+
+.line2 {
+  fill: none;
+  stroke: #4682b4;
+  stroke-width: 3px;
+}
+
+.tooltip2 {
+  background: #b0c4de;
+  border: 0;
+  border-radius: 8px;
+  font-family: "Lobster";
+  font-size: 12px;
+  font-weight: bold;
+  height: 80px;
+  padding: 2px;
+  pointer-events: none;
+  position: absolute;
+  text-align: center;
+  width: 120px;
+}
+.tooltip2 span {
+  color: #000;
+}
+
+
+

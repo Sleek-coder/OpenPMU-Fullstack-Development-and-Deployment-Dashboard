@@ -36,6 +36,12 @@ const App = ()  =>{
 
   }
   useEffect(() => {
+    // let interval = 
+    // setInterval(() => {
+
+    //   getData()
+    // }, 1);
+
   getData();
 
   }, []);
@@ -47,15 +53,14 @@ const App = ()  =>{
     <Router>
      <Navbar/>
 
-        <MySideNav dataset ={dataset}/>
+        {/* <MySideNav dataset ={dataset}/> */}
           <Routes>
-            <Route path='/voltage' element={<Voltage/>} />
+            <Route path='/' element={<Frequency dataset= {dataset}/>} />
+
+            {/* <Route path='/voltage' element={<Voltage/>} /> */}
             {/* <Route path='/chart' element={<Chart/>} /> */}
-            <Route path='/frequency' element={<Frequency dataset= {dataset}/>} />
           </Routes>
     </Router>
   );
 }
 export default  App;
-
-
