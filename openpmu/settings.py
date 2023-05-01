@@ -206,8 +206,9 @@ STATIC_URL = 'static_files/'
 
 # STATIC_URL = '/static/'
         # 'DIRS': [BASE_DIR/ 'build'],
+# STATIC_ROOT = os.path.join(BASE_DIR,'build/static')
 
-STATIC_ROOT = os.path.join(BASE_DIR,'build/static')
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
 # STATICFILES_DIRS = [
 #     BASE_DIR / "static",
 #     "/var/www/static/",
