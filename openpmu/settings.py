@@ -155,6 +155,7 @@ DATABASES = {
         'HOST': 'containers-us-west-208.railway.app', 
         'PORT': '7825',
     }
+}
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
