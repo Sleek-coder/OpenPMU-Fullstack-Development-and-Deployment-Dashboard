@@ -204,9 +204,9 @@ USE_TZ = True
 # The STATIC_URL  maybe helps specifies  the url or path Nginx should search 
 # so as to host all static files: lets confirm!
 
-STATIC_URL = 'static/'
+# STATIC_URL = 'static/'
 
-# STATIC_URL = 'build/static/'
+STATIC_URL = 'build/static/'
 
 # STATIC_URL = '/static/'
         # 'DIRS': [BASE_DIR/ 'build'],
