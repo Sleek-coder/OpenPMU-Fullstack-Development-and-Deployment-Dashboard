@@ -23,9 +23,14 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # include('livedata.urls'),
     path('', include('livedata.urls')),
-        #  PmuDataView1.as_view(), name="home"),
+    
+    
+    
+    #  PmuDataView1.as_view(), name="home"),
     # path('', PmuDataView2.as_view(), name="chart"),
     # path('', PmuDataView1.as_view(), name="voltage-synchrophasors"),
     # path('', PmuDataView2.as_view(), name="frequency-synchrophasors"),
 
 ]
++ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
