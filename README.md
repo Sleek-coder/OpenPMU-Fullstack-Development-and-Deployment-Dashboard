@@ -1,13 +1,9 @@
 # openpmu-fullstack-dev
-This app host a live data streaming dashboard using the openpmu realtime dataset
-sudo python3 -m pip install --upgrade pip
-sudo apt-get update
+This app host a live data streaming dashboard using the openpmu realtime dataset. To clone this repository, run git clone https://github.com/Sleek-coder/openpmu-fullstack-dev.git on your command line and cd into openpmu-fullstack-dev folder. 
 
-python3 -m venv openpmu-env
-`source openpmu-env/bin/activate`
-
-sudo python3 -m pip install pyqt5
-cd into  openpmu-fullstack-dev directory
+Run sudo python3 -m pip install --upgrade pip
+Run sudo apt-get update
+if in linux, run `source openpmu-env/bin/activate`
 cd  into thesrc-frontendend
 run npm start
 Also , open a new directory , cd into  OpenPMU_XML_SV-Simulator 
