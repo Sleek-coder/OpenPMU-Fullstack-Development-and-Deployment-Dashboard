@@ -19,3 +19,5 @@ In the project directory . run Python3  manage.py runserver
 Also,  open a new dir 
 run Python3 manage.py updatemodels
  Your fullstack  app is deployed 
+
+Please find the written documentation [openpmu_dashboard.pdf](https://github.com/user-attachments/files/16824073/openpmu_dashboard.pdf)
