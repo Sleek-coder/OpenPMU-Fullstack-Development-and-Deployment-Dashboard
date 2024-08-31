@@ -21,4 +21,7 @@ run Python3 manage.py updatemodels
  Your fullstack  app is deployed 
 
 Please find the written documentation
+
+![openpmu-dashboard](https://github.com/user-attachments/assets/eedc8188-a7f6-4740-8323-72f4a4aac7f5)
+Download PDF here:
 [openpmu_dashboard.pdf](https://github.com/user-attachments/files/16824073/openpmu_dashboard.pdf)
